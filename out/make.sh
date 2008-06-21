@@ -1,2 +1,2 @@
 #! /bin/sh
-TEXINPUTS=$TEXINPUTS:.. pdflatex ../pic-stuttgart.tex
+TEXINPUTS=$TEXINPUTS:.. pdflatex ../slides.tex
