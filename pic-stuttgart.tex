@@ -1,0 +1,104 @@
+%\documentclass[handout,t]{beamer}
+\documentclass{beamer}
+\batchmode
+%\usepackage[utf-8]{inputenc}
+% \usepackage{pgfpages}
+% \pgfpagesuselayout{4 on 1}[letterpaper,landscape,border shrink=5mm]
+
+
+\usepackage{amsmath,amssymb,enumerate,epsfig,bbm,calc,color,ifthen,capt-of}
+
+%\usepackage{beamerthemesplit}
+\usetheme{Berlin}
+\usecolortheme{bear}
+
+\title{Methods for High-Order\\Particle-in-Cell Simulation}
+\author[Jan S. Hesthaven and Andreas Kl\"ockner]{Jan S. Hesthaven\\Andreas Kl\"ockner}
+\date[IAG Uni Stuttgart]{IAG Uni Stuttgart, Arbeitsgruppe Prof. Munz\\July 21, 2007}
+\pgfdeclareimage[height=1cm]{brown-logo}{brown-logo.pdf}
+\logo{\pgfuseimage{brown-logo}\hspace*{0.3cm}}
+
+\def\bnabla{\mathbf \nabla}
+\def\E{\mathbf E}
+\def\H{\mathbf H}
+\def\r{\mathbf r}
+\def\k{\mathbf k}
+\def\R{\mathbf R}
+\def\K{\mathbf K}
+
+\AtBeginSection[]
+{
+  \begin{frame}<beamer>
+    \frametitle{Outline}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+\beamerdefaultoverlayspecification{<+->}
+
+% -----------------------------------------------------------------------------
+\newcommand{\assign}{:=}
+\newcommand{\tmmathbf}[1]{\boldsymbol{#1}}
+\newcommand{\tmop}[1]{\operatorname{#1}}
+% -----------------------------------------------------------------------------
+\newcommand{\discretized}[2]{{#1}^\triangle_{#2}}
+\newcommand{\discretizedtwo}[2]{{#1}^{\triangle,2}_{#2}}
+\newcommand{\anyip}[2]{\left\langle#1,#2\right\rangle}
+\newcommand{\ip}[2]{\left\langle#1,#2\right\rangle_{\mathbb{R}^d}}
+\newcommand{\ippc}[2]{\left\langle#1,#2\right\rangle_P}
+\newcommand{\grad}{\tmmathbf{\nabla}}
+\newcommand{\laplace}{\nabla^2}
+\newcommand{\ipkgrad}[2]{\left\langle#1,#2\right\rangle_{\grad\Omega}}
+\newcommand{\ipkgradmv}[2]{\left\langle#1,#2\right\rangle_{\grad\Omega}^{\text{MV}}}
+\newcommand{\trp}[1]{{#1}^T}
+\newcommand{\herm}[1]{{#1}^H}
+\newcommand{\conj}[1]{{#1}^*}
+\newcommand{\dimtimes}{\times}
+\let\oldepsilon=\epsilon
+\let\epsilon=\varepsilon
+
+\newcommand{\identifier}[1]{{\tt#1}}
+\newcommand{\inserttext}[1]{\verbatiminput{#1}}
+
+\newcommand{\insertimage}[2]{\includegraphics[#1]{#2}}
+% -----------------------------------------------------------------------------
+\begin{document}
+% -----------------------------------------------------------------------------
+
+\frame{\titlepage}
+
+\section[Outline]{}
+\begin{frame}{Outline}
+  \tableofcontents
+\end{frame}
+
+% -----------------------------------------------------------------------------
+\section{Introduction}
+\subsection{Why should and how can this be done?}
+\begin{frame}{Why High-Order PIC?}
+  \begin{itemize}
+    \item Long Time Integration
+    \item Improved Phase Error
+    \item etc.
+  \end{itemize}
+  
+\end{frame}
+\begin{frame}{Why High-Order PIC?}
+  \begin{itemize}
+    \item Long Time Integration
+    \item Improved Phase Error
+    \item etc.
+  \end{itemize}
+  
+\end{frame}
+% -----------------------------------------------------------------------------
+\section[Reconstruction]{Reconstructing the Current Density}
+% -----------------------------------------------------------------------------
+\section[Pushing]{Finding the per-Particle Forces}
+% -----------------------------------------------------------------------------
+\section[Resolution]{Resolution Management}
+% -----------------------------------------------------------------------------
+\section[Evaluating]{Evaluating Method Performance}
+% -----------------------------------------------------------------------------
+\section{Conclusions}
+% -----------------------------------------------------------------------------
+\end{document}
